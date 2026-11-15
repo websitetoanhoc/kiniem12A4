@@ -32,7 +32,6 @@
             line-height: 1.6;
         }
 
-        /* Navbar */
         nav {
             position: fixed;
             top: 0;
@@ -72,11 +71,10 @@
             color: var(--accent-color);
         }
 
-        /* Header */
         header {
             height: 85vh;
             background: linear-gradient(135deg, rgba(43, 88, 118, 0.85), rgba(78, 67, 118, 0.85)), 
-                        url('images/anh2.jpg.jfif') center/cover no-repeat;
+                        url('anh2.jpg') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -85,7 +83,6 @@
             color: white;
             padding: 0 20px;
             margin-top: 60px;
-            position: relative;
         }
 
         header h1 {
@@ -136,7 +133,6 @@
             color: var(--text-muted);
         }
 
-        /* Sơ đồ lớp học */
         .seating-section {
             background: #ffffff;
         }
@@ -151,7 +147,6 @@
             margin: 0 auto 50px auto;
             box-shadow: 0 8px 25px rgba(42, 82, 152, 0.25);
             border: 2px dashed rgba(255,255,255,0.4);
-            position: relative;
         }
 
         .teacher-box h3 {
@@ -180,8 +175,6 @@
             padding: 25px 20px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.04);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
         }
 
         .to-card:hover {
@@ -219,15 +212,11 @@
 
         .seat-item:hover {
             background: #f0f4f8;
-            transform: scale(1.01);
         }
 
         .student-name {
             font-weight: 500;
             color: #2d3748;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
 
         .badge-role {
@@ -243,7 +232,6 @@
         .badge-leader { background: #3182ce; color: white; }
         .badge-labor { background: #38a169; color: white; }
 
-        /* Lưới ảnh kỷ yếu */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -310,21 +298,13 @@
             color: var(--text-muted);
         }
 
-        /* Phần Gửi Lời Nhắn Tương Lai */
         .future-section {
             background: linear-gradient(135deg, #2b5876, #4e4376);
             color: white;
-            position: relative;
-            overflow: hidden;
         }
 
-        .future-section .section-title h2 {
-            color: white;
-        }
-
-        .future-section .section-title p {
-            color: rgba(255, 255, 255, 0.8);
-        }
+        .future-section .section-title h2 { color: white; }
+        .future-section .section-title p { color: rgba(255, 255, 255, 0.8); }
 
         .future-container {
             max-width: 800px;
@@ -355,10 +335,7 @@
             color: var(--text-main);
         }
 
-        .form-group textarea {
-            resize: vertical;
-            height: 110px;
-        }
+        .form-group textarea { resize: vertical; height: 110px; }
 
         .btn-submit {
             background: var(--accent-color);
@@ -393,7 +370,6 @@
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
             border-left: 5px solid var(--accent-color);
         }
 
@@ -404,21 +380,9 @@
             margin-bottom: 8px;
         }
 
-        .future-note-header strong {
-            color: var(--primary-color);
-            font-size: 1.1rem;
-        }
+        .future-note-header strong { color: var(--primary-color); font-size: 1.1rem; }
+        .target-year-badge { background: var(--primary-color); color: white; font-size: 0.75rem; padding: 3px 10px; border-radius: 15px; font-weight: 600; }
 
-        .target-year-badge {
-            background: var(--primary-color);
-            color: white;
-            font-size: 0.75rem;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-weight: 600;
-        }
-
-        /* Lightbox */
         .lightbox {
             display: none;
             position: fixed;
@@ -431,45 +395,17 @@
             padding: 20px;
         }
 
-        .lightbox img {
-            max-width: 90%;
-            max-height: 75vh;
-            border-radius: 12px;
-        }
+        .lightbox img { max-width: 90%; max-height: 75vh; border-radius: 12px; }
+        .lightbox-caption { color: white; font-size: 1.1rem; text-align: center; margin-top: 15px; }
+        .close-lightbox { position: absolute; top: 25px; right: 35px; color: white; font-size: 2.5rem; cursor: pointer; font-weight: bold; }
 
-        .lightbox-caption {
-            color: white;
-            font-size: 1.1rem;
-            text-align: center;
-            margin-top: 15px;
-        }
+        footer { background: var(--primary-color); color: white; text-align: center; padding: 30px 20px; font-size: 0.95rem; }
 
-        .close-lightbox {
-            position: absolute;
-            top: 25px;
-            right: 35px;
-            color: white;
-            font-size: 2.5rem;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        footer {
-            background: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.95rem;
-        }
-
-        @media (max-width: 768px) {
-            .form-row { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 768px) { .form-row { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav>
         <div class="logo">🌸 Tập Thể Lớp 12A4</div>
         <ul class="nav-links">
@@ -480,14 +416,12 @@
         </ul>
     </nav>
 
-    <!-- Header -->
     <header id="home">
         <h1>✨ Niên Khóa 12A4 ✨</h1>
         <p>Nơi lưu giữ thanh xuân rực rỡ dưới sự dìu dắt của cô giáo chủ nhiệm Hồ Thị Hồng Thủy và tập thể lớp thân yêu.</p>
         <a href="#sodo" class="btn-scroll">🌟 Khám phá sơ đồ lớp học</a>
     </header>
 
-    <!-- Sơ đồ lớp học -->
     <section id="sodo" class="seating-section">
         <div class="section-title">
             <h2>📍 Sơ Đồ Lớp Học 12A4</h2>
@@ -500,7 +434,6 @@
         </div>
 
         <div class="seating-grid">
-            <!-- Tổ 1 -->
             <div class="to-card">
                 <h4>📌 TỔ 1</h4>
                 <ul class="seat-list">
@@ -517,7 +450,6 @@
                 </ul>
             </div>
 
-            <!-- Tổ 2 -->
             <div class="to-card">
                 <h4>📌 TỔ 2</h4>
                 <ul class="seat-list">
@@ -533,7 +465,6 @@
                 </ul>
             </div>
 
-            <!-- Tổ 3 -->
             <div class="to-card">
                 <h4>📌 TỔ 3</h4>
                 <ul class="seat-list">
@@ -549,7 +480,6 @@
                 </ul>
             </div>
 
-            <!-- Tổ 4 -->
             <div class="to-card">
                 <h4>📌 TỔ 4</h4>
                 <ul class="seat-list">
@@ -568,7 +498,6 @@
         </div>
     </section>
 
-    <!-- Album ảnh kỷ yếu -->
     <section id="gallery">
         <div class="section-title">
             <h2>📸 Album Khoảnh Khắc 12A4</h2>
@@ -576,10 +505,10 @@
         </div>
 
         <div class="gallery-grid">
-            <div class="memory-card" onclick="openLightbox('images/anh1.jpg.jfif', 'Đêm hội và gắn kết tập thể lớp 12A4')">
+            <div class="memory-card" onclick="openLightbox('anh1.jpg', 'Đêm hội và gắn kết tập thể lớp 12A4')">
                 <div class="memory-img-wrapper">
                     <span class="tag">🔥 Tập thể</span>
-                    <img src="images/anh1.jpg.jfif" alt="Ảnh 1">
+                    <img src="anh1.jpg" alt="Ảnh 1">
                 </div>
                 <div class="memory-info">
                     <h3>✨ Đêm Hội & Gắn Kết</h3>
@@ -587,10 +516,10 @@
                 </div>
             </div>
 
-            <div class="memory-card" onclick="openLightbox('images/anh2.jpg.jfif', 'Hành trình ngoại khóa tuổi trẻ 12A4')">
+            <div class="memory-card" onclick="openLightbox('anh2.jpg', 'Hành trình ngoại khóa tuổi trẻ 12A4')">
                 <div class="memory-img-wrapper">
                     <span class="tag">🎒 Ngoại khóa</span>
-                    <img src="images/anh2.jpg.jfif" alt="Ảnh 2">
+                    <img src="anh2.jpg" alt="Ảnh 2">
                 </div>
                 <div class="memory-info">
                     <h3>🚌 Hành Trình Tuổi Trẻ</h3>
@@ -598,10 +527,10 @@
                 </div>
             </div>
 
-            <div class="memory-card" onclick="openLightbox('images/anh3.jpg.jfif', 'Góc nhỏ lớp học thân quen ngập tràn sắc đỏ')">
+            <div class="memory-card" onclick="openLightbox('anh3.jpg', 'Góc nhỏ lớp học thân quen ngập tràn sắc đỏ')">
                 <div class="memory-img-wrapper">
                     <span class="tag">🏫 Lớp học</span>
-                    <img src="images/anh3.jpg.jfif" alt="Ảnh 3">
+                    <img src="anh3.jpg" alt="Ảnh 3">
                 </div>
                 <div class="memory-info">
                     <h3>🏮 Góc Nhỏ Thân Quen</h3>
@@ -609,10 +538,10 @@
                 </div>
             </div>
 
-            <div class="memory-card" onclick="openLightbox('images/anh4.jpg.jfif', 'Tiết mục văn nghệ rực rỡ sân trường')">
+            <div class="memory-card" onclick="openLightbox('anh4.jpg', 'Tiết mục văn nghệ rực rỡ sân trường')">
                 <div class="memory-img-wrapper">
                     <span class="tag">🎤 Văn nghệ</span>
-                    <img src="images/anh4.jpg.jfif" alt="Ảnh 4">
+                    <img src="anh4.jpg" alt="Ảnh 4">
                 </div>
                 <div class="memory-info">
                     <h3>⭐ Tỏa Sáng Trên Sân Khấu</h3>
@@ -622,7 +551,6 @@
         </div>
     </section>
 
-    <!-- Gửi Lời Nhắn Cho Tương Lai -->
     <section id="future" class="future-section">
         <div class="section-title">
             <h2>🚀 Gửi Lời Nhắn Cho Tương Lai</h2>
@@ -659,7 +587,6 @@
         </div>
     </section>
 
-    <!-- Lightbox -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
         <span class="close-lightbox" onclick="closeLightbox(event)">&times;</span>
         <img id="lightboxImg" src="" alt="Zoom">
