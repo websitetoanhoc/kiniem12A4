@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Kỷ Yếu Lớp 12A4 - Thanh Xuân Rực Rỡ ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2b5876;
+            --secondary-color: #4e4376;
+            --accent-color: #ff7e5f;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-muted: #636e72;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            height: 85vh;
+            background: linear-gradient(135deg, rgba(43, 88, 118, 0.85), rgba(78, 67, 118, 0.85)), 
+                        url('images/anh2.jpg.jfif') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .btn-scroll {
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-scroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 126, 95, 0.4);
+        }
+
+        section {
+            padding: 80px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+        }
+
+        /* Sơ đồ lớp học */
+        .seating-section {
+            background: #ffffff;
+        }
+
+        .teacher-box {
+            text-align: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 16px;
+            max-width: 450px;
+            margin: 0 auto 50px auto;
+            box-shadow: 0 8px 25px rgba(42, 82, 152, 0.25);
+            border: 2px dashed rgba(255,255,255,0.4);
+            position: relative;
+        }
+
+        .teacher-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .teacher-box p {
+            font-size: 1.1rem;
+            color: #ffecd2;
+            font-weight: 600;
+        }
+
+        .seating-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 25px;
+            max-width: 1250px;
+            margin: 0 auto;
+        }
+
+        .to-card {
+            background: #ffffff;
+            border: 1px solid #e1e8ed;
+            border-radius: 16px;
+            padding: 25px 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .to-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .to-card h4 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        .seat-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .seat-item {
+            background: #fdfdfd;
+            border: 1px solid #edf2f7;
+            padding: 11px 14px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .seat-item:hover {
+            background: #f0f4f8;
+            transform: scale(1.01);
+        }
+
+        .student-name {
+            font-weight: 500;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge-role {
+            font-size: 0.72rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .badge-vip { background: #e53e3e; color: white; }
+        .badge-sub { background: #d69e2e; color: white; }
+        .badge-leader { background: #3182ce; color: white; }
+        .badge-labor { background: #38a169; color: white; }
+
+        /* Lưới ảnh kỷ yếu */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1250px;
+            margin: 0 auto;
+        }
+
+        .memory-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            transition: transform 0.35s ease;
+            cursor: pointer;
+            border: 1px solid #edf2f7;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .memory-img-wrapper {
+            width: 100%;
+            height: 230px;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .memory-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .memory-card:hover .memory-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .memory-info h3 {
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+        }
+
+        .memory-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Phần Gửi Lời Nhắn Tương Lai */
+        .future-section {
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .future-section .section-title h2 {
+            color: white;
+        }
+
+        .future-section .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .future-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            background: rgba(255,255,255,0.9);
+            color: var(--text-main);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 110px;
+        }
+
+        .btn-submit {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .btn-submit:hover {
+            background: #ff6a45;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,126,95,0.4);
+        }
+
+        .future-notes-list {
+            margin-top: 35px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .future-note-item {
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--text-main);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .future-note-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .future-note-header strong {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .target-year-badge {
+            background: var(--primary-color);
+            color: white;
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 75vh;
+            border-radius: 12px;
+        }
+
+        .lightbox-caption {
+            color: white;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">🌸 Tập Thể Lớp 12A4</div>
+        <ul class="nav-links">
+            <li><a href="#home">🏠 Trang chủ</a></li>
+            <li><a href="#sodo">📋 Sơ đồ lớp</a></li>
+            <li><a href="#gallery">📸 Kỷ yếu</a></li>
+            <li><a href="#future">🚀 Gửi tương lai</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+        <h1>✨ Niên Khóa 12A4 ✨</h1>
+        <p>Nơi lưu giữ thanh xuân rực rỡ dưới sự dìu dắt của cô giáo chủ nhiệm Hồ Thị Hồng Thủy và tập thể lớp thân yêu.</p>
+        <a href="#sodo" class="btn-scroll">🌟 Khám phá sơ đồ lớp học</a>
+    </header>
+
+    <!-- Sơ đồ lớp học -->
+    <section id="sodo" class="seating-section">
+        <div class="section-title">
+            <h2>📍 Sơ Đồ Lớp Học 12A4</h2>
+            <p>Cập nhật sơ đồ chính thức áp dụng từ ngày 2/11/2026[cite: 5]</p>
+        </div>
+
+        <div class="teacher-box">
+            <h3>⭐ BÀN GIÁO VIÊN ⭐</h3>
+            <p>👩‍🏫 GVCN: Cô Hồ Thị Hồng Thủy</p>
+        </div>
+
+        <div class="seating-grid">
+            <!-- Tổ 1 -->
+            <div class="to-card">
+                <h4>📌 TỔ 1</h4>
+                <ul class="seat-list">
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Thành Phước</span> <span class="badge-role badge-labor">Phó lao động</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Quốc Minh</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Tường Vy</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Ý Duyên</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Khánh Ngân</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Thảo Vy</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Bảo Nhi</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Hoành Phát</span> <span class="badge-role badge-leader">TT Tổ 1</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Bích Trân</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Thái Duy</span></li>
+                </ul>
+            </div>
+
+            <!-- Tổ 2 -->
+            <div class="to-card">
+                <h4>📌 TỔ 2</h4>
+                <ul class="seat-list">
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Hải Minh</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Gia Tuệ</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Minh Thư</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Quốc Bảo</span> <span class="badge-role badge-leader">TT Tổ 2</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Quỳnh Anh</span> <span class="badge-role badge-sub">PBT-PPT</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Mỹ Quyên</span></li>
+                    <li class="seat-item"><span class="student-name">🔥 Ngọc Ánh</span> <span class="badge-role badge-vip">Bí thư</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Phúc Minh</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Hoài Sang</span></li>
+                </ul>
+            </div>
+
+            <!-- Tổ 3 -->
+            <div class="to-card">
+                <h4>📌 TỔ 3</h4>
+                <ul class="seat-list">
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Khánh Ly</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Nguyễn Huỳnh Kim Ngân</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Hưng Điền</span></li>
+                    <li class="seat-item"><span class="student-name">✍️ Nguyễn Bùi Trâm Anh</span> <span class="badge-role badge-sub">Thư ký - TT 3</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Bảo Châu</span></li>
+                    <li class="seat-item"><span class="student-name">👑 Mỹ Linh</span> <span class="badge-role badge-vip">Lớp trưởng & Quỹ</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Thiên Trâm</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Minh Khang</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Gia Đạt</span></li>
+                </ul>
+            </div>
+
+            <!-- Tổ 4 -->
+            <div class="to-card">
+                <h4>📌 TỔ 4</h4>
+                <ul class="seat-list">
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Gia Hân</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Lan Phương</span> <span class="badge-role badge-leader">TT Tổ 4</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Ngọc Yến</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Mỹ Phúc</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Kim Mỹ</span> <span class="badge-role badge-sub">Tổ 3</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♀️ Lâm Nguyễn Kim Ngân</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Kiến Thành</span></li>
+                    <li class="seat-item"><span class="student-name">📚 Anh Thơ</span> <span class="badge-role badge-sub">Phó học tập</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ Minh Cuông</span></li>
+                    <li class="seat-item"><span class="student-name">🙋‍♂️ An Thịnh</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Album ảnh kỷ yếu -->
+    <section id="gallery">
+        <div class="section-title">
+            <h2>📸 Album Khoảnh Khắc 12A4</h2>
+            <p>Nhấn vào ảnh để phóng to xem chi tiết</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="memory-card" onclick="openLightbox('images/anh1.jpg.jfif', 'Đêm hội và gắn kết tập thể lớp 12A4')">
+                <div class="memory-img-wrapper">
+                    <span class="tag">🔥 Tập thể</span>
+                    <img src="images/anh1.jpg.jfif" alt="Ảnh 1">
+                </div>
+                <div class="memory-info">
+                    <h3>✨ Đêm Hội & Gắn Kết</h3>
+                    <p>Những nụ cười rạng rỡ sau giờ hoạt động chung.</p>
+                </div>
+            </div>
+
+            <div class="memory-card" onclick="openLightbox('images/anh2.jpg.jfif', 'Hành trình ngoại khóa tuổi trẻ 12A4')">
+                <div class="memory-img-wrapper">
+                    <span class="tag">🎒 Ngoại khóa</span>
+                    <img src="images/anh2.jpg.jfif" alt="Ảnh 2">
+                </div>
+                <div class="memory-info">
+                    <h3>🚌 Hành Trình Tuổi Trẻ</h3>
+                    <p>Cùng nhau lưu lại dấu ấn trong các chuyến đi.</p>
+                </div>
+            </div>
+
+            <div class="memory-card" onclick="openLightbox('images/anh3.jpg.jfif', 'Góc nhỏ lớp học thân quen ngập tràn sắc đỏ')">
+                <div class="memory-img-wrapper">
+                    <span class="tag">🏫 Lớp học</span>
+                    <img src="images/anh3.jpg.jfif" alt="Ảnh 3">
+                </div>
+                <div class="memory-info">
+                    <h3>🏮 Góc Nhỏ Thân Quen</h3>
+                    <p>Bảng đen, phấn trắng và những giờ phút vui vẻ bên nhau.</p>
+                </div>
+            </div>
+
+            <div class="memory-card" onclick="openLightbox('images/anh4.jpg.jfif', 'Tiết mục văn nghệ rực rỡ sân trường')">
+                <div class="memory-img-wrapper">
+                    <span class="tag">🎤 Văn nghệ</span>
+                    <img src="images/anh4.jpg.jfif" alt="Ảnh 4">
+                </div>
+                <div class="memory-info">
+                    <h3>⭐ Tỏa Sáng Trên Sân Khấu</h3>
+                    <p>Tinh thần đoàn kết bùng cháy trong từng tiết mục.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gửi Lời Nhắn Cho Tương Lai -->
+    <section id="future" class="future-section">
+        <div class="section-title">
+            <h2>🚀 Gửi Lời Nhắn Cho Tương Lai</h2>
+            <p>Nhắn gửi một thông điệp cho chính bạn hoặc tập thể lớp ở một cột mốc phía trước</p>
+        </div>
+
+        <div class="future-container">
+            <div class="form-row">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <input type="text" id="senderName" placeholder="✨ Tên hoặc biệt danh của bạn...">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <select id="targetYear">
+                        <option value="Năm 2030 (Sau 4 năm)">⏳ Gửi năm 2030</option>
+                        <option value="Năm 2035 (Sau 9 năm)">⏳ Gửi năm 2035</option>
+                        <option value="Năm 2046 (Họp lớp 20 năm)">🎉 Họp lớp năm 2046</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea id="senderMessage" placeholder="💌 Gửi cho tôi ở tương lai: Hãy luôn giữ vững nhiệt huyết và ước mơ nhé..."></textarea>
+            </div>
+            <button class="btn-submit" onclick="addFutureNote()">Gửi thông điệp thời gian 🚀</button>
+
+            <div class="future-notes-list" id="futureNotesList">
+                <div class="future-note-item">
+                    <div class="future-note-header">
+                        <strong>💖 Tập thể 12A4</strong>
+                        <span class="target-year-badge">Năm 2035 (Sau 9 năm)</span>
+                    </div>
+                    <p>Hy vọng 10 năm sau tất cả chúng ta đều đã thành công trên con đường mình chọn và có một buổi họp lớp thật đông đủ!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <span class="close-lightbox" onclick="closeLightbox(event)">&times;</span>
+        <img id="lightboxImg" src="" alt="Zoom">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <footer>
+        <p>🌸 © 2026 Lớp 12A4 — GVCN: Cô Hồ Thị Hồng Thủy — Mãi nhớ về nhau. 🌸</p>
+    </footer>
+
+    <script>
+        function openLightbox(src, caption) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightboxCaption').textContent = caption;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox(e) {
+            if (e.target.id === 'lightbox' || e.target.classList.contains('close-lightbox')) {
+                document.getElementById('lightbox').style.display = 'none';
+            }
+        }
+
+        function addFutureNote() {
+            const name = document.getElementById('senderName').value.trim();
+            const year = document.getElementById('targetYear').value;
+            const msg = document.getElementById('senderMessage').value.trim();
+            
+            if(!name || !msg) { 
+                alert('Vui lòng nhập tên và nội dung lời nhắn nhé!'); 
+                return; 
+            }
+            
+            const list = document.getElementById('futureNotesList');
+            const item = document.createElement('div');
+            item.className = 'future-note-item';
+            item.innerHTML = `
+                <div class="future-note-header">
+                    <strong>✨ ${escapeHTML(name)}</strong>
+                    <span class="target-year-badge">${escapeHTML(year)}</span>
+                </div>
+                <p>${escapeHTML(msg)}</p>
+            `;
+            list.prepend(item);
+            
+            document.getElementById('senderName').value = '';
+            document.getElementById('senderMessage').value = '';
+        }
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, tag => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                "'": '&#39;',
+                '"': '&quot;'
+            }[tag]));
+        }
+    </script>
+</body>
+</html>
