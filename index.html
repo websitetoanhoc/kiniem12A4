@@ -32,6 +32,7 @@
             line-height: 1.6;
         }
 
+        /* Navbar */
         nav {
             position: fixed;
             top: 0;
@@ -71,6 +72,7 @@
             color: var(--accent-color);
         }
 
+        /* Header */
         header {
             height: 85vh;
             background: linear-gradient(135deg, rgba(43, 88, 118, 0.85), rgba(78, 67, 118, 0.85)), 
@@ -83,6 +85,7 @@
             color: white;
             padding: 0 20px;
             margin-top: 60px;
+            position: relative;
         }
 
         header h1 {
@@ -133,6 +136,7 @@
             color: var(--text-muted);
         }
 
+        /* Sơ đồ lớp học */
         .seating-section {
             background: #ffffff;
         }
@@ -217,6 +221,9 @@
         .student-name {
             font-weight: 500;
             color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .badge-role {
@@ -232,6 +239,7 @@
         .badge-leader { background: #3182ce; color: white; }
         .badge-labor { background: #38a169; color: white; }
 
+        /* Lưới ảnh kỷ yếu */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -298,6 +306,7 @@
             color: var(--text-muted);
         }
 
+        /* Gửi Lời Nhắn Cho Tương Lai */
         .future-section {
             background: linear-gradient(135deg, #2b5876, #4e4376);
             color: white;
@@ -383,6 +392,7 @@
         .future-note-header strong { color: var(--primary-color); font-size: 1.1rem; }
         .target-year-badge { background: var(--primary-color); color: white; font-size: 0.75rem; padding: 3px 10px; border-radius: 15px; font-weight: 600; }
 
+        /* Lightbox */
         .lightbox {
             display: none;
             position: fixed;
@@ -406,6 +416,7 @@
 </head>
 <body>
 
+    <!-- Navbar -->
     <nav>
         <div class="logo">🌸 Tập Thể Lớp 12A4</div>
         <ul class="nav-links">
@@ -416,12 +427,14 @@
         </ul>
     </nav>
 
+    <!-- Header -->
     <header id="home">
         <h1>✨ Niên Khóa 12A4 ✨</h1>
         <p>Nơi lưu giữ thanh xuân rực rỡ dưới sự dìu dắt của cô giáo chủ nhiệm Hồ Thị Hồng Thủy và tập thể lớp thân yêu.</p>
         <a href="#sodo" class="btn-scroll">🌟 Khám phá sơ đồ lớp học</a>
     </header>
 
+    <!-- Sơ đồ lớp học -->
     <section id="sodo" class="seating-section">
         <div class="section-title">
             <h2>📍 Sơ Đồ Lớp Học 12A4</h2>
@@ -498,13 +511,15 @@
         </div>
     </section>
 
+    <!-- Album ảnh kỷ yếu (Đã thêm đủ 10 ảnh từ anh1 đến anh10) -->
     <section id="gallery">
         <div class="section-title">
             <h2>📸 Album Khoảnh Khắc 12A4</h2>
-            <p>Nhấn vào ảnh để phóng to xem chi tiết</p>
+            <p>Nhấn vào ảnh để phóng to xem chi tiết các kỷ niệm của lớp</p>
         </div>
 
         <div class="gallery-grid">
+            <!-- Ảnh 1 -->
             <div class="memory-card" onclick="openLightbox('anh1.jpg', 'Đêm hội và gắn kết tập thể lớp 12A4')">
                 <div class="memory-img-wrapper">
                     <span class="tag">🔥 Tập thể</span>
@@ -516,6 +531,7 @@
                 </div>
             </div>
 
+            <!-- Ảnh 2 -->
             <div class="memory-card" onclick="openLightbox('anh2.jpg', 'Hành trình ngoại khóa tuổi trẻ 12A4')">
                 <div class="memory-img-wrapper">
                     <span class="tag">🎒 Ngoại khóa</span>
@@ -527,6 +543,7 @@
                 </div>
             </div>
 
+            <!-- Ảnh 3 -->
             <div class="memory-card" onclick="openLightbox('anh3.jpg', 'Góc nhỏ lớp học thân quen ngập tràn sắc đỏ')">
                 <div class="memory-img-wrapper">
                     <span class="tag">🏫 Lớp học</span>
@@ -538,6 +555,7 @@
                 </div>
             </div>
 
+            <!-- Ảnh 4 -->
             <div class="memory-card" onclick="openLightbox('anh4.jpg', 'Tiết mục văn nghệ rực rỡ sân trường')">
                 <div class="memory-img-wrapper">
                     <span class="tag">🎤 Văn nghệ</span>
@@ -548,9 +566,82 @@
                     <p>Tinh thần đoàn kết bùng cháy trong từng tiết mục.</p>
                 </div>
             </div>
+
+            <!-- Ảnh 5 -->
+            <div class="memory-card" onclick="openLightbox('anh5.jpg', 'Ngày 20/10 tri ân và chúc mừng các bạn nữ 12A4')">
+                <div class="memory-img-wrapper">
+                    <span class="tag">💐 Ngày 20/10</span>
+                    <img src="anh5.jpg" alt="Ảnh 5">
+                </div>
+                <div class="memory-info">
+                    <h3>🌸 Chúc Mừng 20/10</h3>
+                    <p>Ngày đặc biệt tôn vinh những bóng hồng xinh đẹp của lớp 12A4.</p>
+                </div>
+            </div>
+
+            <!-- Ảnh 6 -->
+            <div class="memory-card" onclick="openLightbox('anh6.jpg', 'Hội xuân lần đầu dựng trại của tập thể lớp')">
+                <div class="memory-img-wrapper">
+                    <span class="tag">⛺ Hội Xuân</span>
+                    <img src="anh6.jpg" alt="Anh 6">
+                </div>
+                <div class="memory-info">
+                    <h3>🏮 Hội Xuân: Dựng Trại Ngày Tết</h3>
+                    <p>Lần đầu tiên cùng nhau quây quần dựng lều trại đón hội xuân rực rỡ.</p>
+                </div>
+            </div>
+
+            <!-- Ảnh 7 -->
+            <div class="memory-card" onclick="openLightbox('anh7.jpg', 'Khoảnh khắc vui tươi tại cổng trại Hội Xuân')">
+                <div class="memory-img-wrapper">
+                    <span class="tag">⛺ Hội Xuân</span>
+                    <img src="anh7.jpg" alt="Anh 7">
+                </div>
+                <div class="memory-info">
+                    <h3>🎨 Sắc Xuân 12A4</h3>
+                    <p>Không khí rộn ràng và đầy nhiệt huyết tại khu vực trại của lớp.</p>
+                </div>
+            </div>
+
+            <!-- Ảnh 8 -->
+            <div class="memory-card" onclick="openLightbox('anh8.jpg', 'Tập thể lớp chụp kỷ niệm bên công sức dựng trại')">
+                <div class="memory-img-wrapper">
+                    <span class="tag">⛺ Hội Xuân</span>
+                    <img src="anh8.jpg" alt="Anh 8">
+                </div>
+                <div class="memory-info">
+                    <h3>🌿 Thành Quả Trại Xuân</h3>
+                    <p>Cùng nhau nhìn lại mô hình cắm trại đầu tay đầy tự hào.</p>
+                </div>
+            </div>
+
+            <!-- Ảnh 9 -->
+            <div class="memory-card" onclick="openLightbox('anh9.jpg', 'Góc sum họp ấm cúng trong những ngày hội xuân')">
+                <div class="memory-img-wrapper">
+                    <span class="tag">⛺ Hội Xuân</span>
+                    <img src="anh9.jpg" alt="Anh 9">
+                </div>
+                <div class="memory-info">
+                    <h3>🎊 Sum Vầy Ngày Tết</h3>
+                    <p>Khoảnh khắc gắn kết tình cảm bạn bè trong ngày hội đáng nhớ.</p>
+                </div>
+            </div>
+
+            <!-- Ảnh 10 -->
+            <div class="memory-card" onclick="openLightbox('anh10.jpg', 'Lần đầu làm thí nghiệm thực tế tại phòng học')">
+                <div class="memory-img-wrapper">
+                    <span class="tag">🔬 Thí nghiệm</span>
+                    <img src="anh10.jpg" alt="Anh 10">
+                </div>
+                <div class="memory-info">
+                    <h3>🧪 Giờ Thí Nghiệm Khám Phá</h3>
+                    <p>Lần đầu tiên cả lớp hào hứng thực hiện những thí nghiệm sinh động.</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Gửi Lời Nhắn Cho Tương Lai -->
     <section id="future" class="future-section">
         <div class="section-title">
             <h2>🚀 Gửi Lời Nhắn Cho Tương Lai</h2>
@@ -587,6 +678,7 @@
         </div>
     </section>
 
+    <!-- Lightbox -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
         <span class="close-lightbox" onclick="closeLightbox(event)">&times;</span>
         <img id="lightboxImg" src="" alt="Zoom">
